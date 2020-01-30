@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import { StyleSheet, Text, View, Button, TextInput } from 'react-native';
 import { AppLoading } from 'expo';
 import * as Font from 'expo-font';
-import Home from './screens/home';
-import Navigator from './routes/homeStack';
+import Navigator from './routes/drawer';
 
 const getFonts = () => Font.loadAsync({
     'source-regular': require('./assets/fonts/SourceSansPro-Regular.ttf'),
