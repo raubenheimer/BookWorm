@@ -7,12 +7,42 @@ export const globalStyles = StyleSheet.create({
     },
     titleText: {
         fontFamily: 'source-bold',
-        fontSize: 18,
-        color: '#333'
+        fontSize: 20,
+        color: '#000',
+        marginLeft: 10
+    },
+
+    bookDescription: {
+        fontFamily: 'source-regular',
+        marginHorizontal: 10,
+        textAlign: 'justify',
+        marginTop: 10,
+        fontSize: 15,
+    },
+    author: {
+        fontSize: 13,
+        marginLeft: 10,
+        fontFamily: 'source-regular',
+        color: '#777'
     },
     paragraph: {
         marginVertical: 8,
         lineHeight: 20,
+    },
+    input:{
+        fontFamily: 'source-regular',
+        padding:10,
+        fontSize: 18,
+        borderRadius: 6,
+        color: '#000',
+        marginVertical: 10,
+        borderRadius: 6,
+        elevation: 3,
+        backgroundColor: '#fff',
+        shadowOffset: { width: 1, height: 1},
+        shadowColor: '#333',
+        shadowOpacity: 0.3,
+        shadowRadius: 2  
     }
 });
 

@@ -9,8 +9,15 @@ export default function ReviewDetails({ navigation }) {
     return (
         <View style={globalStyles.container}>
             <Card>
-                <Text>{navigation.getParam('title')}</Text>
-                <Text>{navigation.getParam('body')}</Text>
+                <Text style={globalStyles.titleText}>
+                    {navigation.getParam('title')}
+                </Text>
+                <Text style={globalStyles.author}>
+                    Author: {navigation.getParam('author')}
+                </Text>
+                <Text style={globalStyles.bookDescription}>
+                    {navigation.getParam('body')}
+                </Text>
                 <View style={styles.rating}>
                     <Text>Book Worm rating: </Text>
                     <Image source={images.ratings[rating]} style={styles.ratingimg} />
@@ -31,8 +38,8 @@ const styles = StyleSheet.create({
     },
 
     ratingimg: {
-    width: 100,
-    height: 50,
-    resizeMode: 'contain'
+        width: 100,
+        height: 50,
+        resizeMode: 'contain'
     }
 })

@@ -10,10 +10,10 @@ export default function Header({ navigation, title }) {
     }
 
     return(
-        <View style={StyleSheet.header}>  
+        <View style={styles.header}>  
             <MaterialIcons name='menu' size={28} onPress={openMenu} style={styles.icon} />
             <View> 
-                <Text style={StyleSheet.headerText}>{title}</Text>
+                <Text style={styles.headerText}>{title}</Text>
             </View>
         </View>
     );
@@ -27,6 +27,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center'
     },
+    //Home stack for review
     headerText: {
         fontWeight: 'bold',
         fontSize: 20,
@@ -35,6 +36,6 @@ const styles = StyleSheet.create({
     },
     icon: {
         position: 'absolute',
-        left: 16
+        left: -60
     }
 });
