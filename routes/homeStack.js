@@ -2,23 +2,24 @@ import React from 'react';
 import { createStackNavigator } from 'react-navigation-stack';
 import Home from '../screens/home';
 import ReviewDetails from '../screens/reviewDetails';
-import Header from  '../shared/header';
+import Header from '../shared/header';
 import { globalStyles } from '../styles/global';
+
 
 
 
 const screens = {
     Home: {
         screen: Home,
-        navigationOptions:  ({ navigation }) => {
+        navigationOptions: ({ navigation }) => {
             return {
-                headerTitle: () => <Header navigation={navigation} title='BookWorm'/>
+                header: () => <Header navigation={navigation} title='BookWorm'/>
             }
         }
     },
     ReviewDetails: {
         screen: ReviewDetails,
-        navigationOptions:  {
+        navigationOptions: {
             title: 'Review Details'
         }
     }
@@ -27,11 +28,11 @@ const screens = {
 const HomeStack = createStackNavigator(screens, {
     defaultNavigationOptions: {
         headerTintColor: '#000',
-        headerStyle: { backgroundColor: '#fff'},
+        headerStyle: { backgroundColor: '#fff' },
         headerTitleStyle: {
-            fontWeight: 'bold',
+            fontFamily: 'source-bold',
             fontSize: 20,
-            color: '#333',
+            color: '#000',
             letterSpacing: 1,
         }
     }

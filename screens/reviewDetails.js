@@ -19,8 +19,8 @@ export default function ReviewDetails({ navigation }) {
                     {navigation.getParam('body')}
                 </Text>
                 <View style={styles.rating}>
-                    <Text>Book Worm rating: </Text>
-                    <Image source={images.ratings[rating]} style={styles.ratingimg} />
+                    <Text style={styles.bookworm}>Book Worm rating: </Text>
+                    <Image source={images.ratings[rating]} style={styles.ratingimg}  />
                 </View>
             </Card>
         </View>
@@ -30,16 +30,23 @@ export default function ReviewDetails({ navigation }) {
 const styles = StyleSheet.create({
     rating: {
         flexDirection: 'row',
-        justifyContent: 'center',
-        paddingTop: 16,
-        marginTop: 16,
-        borderTopWidth: 1,
+        paddingTop: 6,
+        marginTop: 7,
+        borderTopWidth: 2,
         borderTopColor: '#eee'
     },
 
     ratingimg: {
-        width: 100,
-        height: 50,
-        resizeMode: 'contain'
+        position: 'absolute',
+        left: 80,
+        height: 25,
+        resizeMode: 'center',
+        paddingLeft: 0,
+        marginTop: 5
+    },
+    bookworm: {
+        marginLeft: 10,
+        fontFamily: 'source-bold',
+        fontSize: 16
     }
 })

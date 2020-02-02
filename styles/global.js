@@ -35,7 +35,7 @@ export const globalStyles = StyleSheet.create({
         fontSize: 18,
         borderRadius: 6,
         color: '#000',
-        marginVertical: 10,
+        marginTop: 10,
         borderRadius: 6,
         elevation: 3,
         backgroundColor: '#fff',
@@ -43,6 +43,13 @@ export const globalStyles = StyleSheet.create({
         shadowColor: '#333',
         shadowOpacity: 0.3,
         shadowRadius: 2  
+    },
+    required: {
+        color: 'red',
+        marginTop: 0,
+        marginBottom: 4,
+        paddingTop:0,
+        borderColor: 'black',
     }
 });
 
