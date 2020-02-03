@@ -1,9 +1,10 @@
 import { StyleSheet } from 'react-native';
 
+//Gobal Styles
 export const globalStyles = StyleSheet.create({
     container: {
         padding: 20,
-        flex : 1,
+        flex: 1,
     },
     titleText: {
         fontFamily: 'source-bold',
@@ -29,9 +30,9 @@ export const globalStyles = StyleSheet.create({
         marginVertical: 8,
         lineHeight: 20,
     },
-    input:{
+    input: {
         fontFamily: 'source-regular',
-        padding:10,
+        padding: 10,
         fontSize: 18,
         borderRadius: 6,
         color: '#000',
@@ -39,26 +40,27 @@ export const globalStyles = StyleSheet.create({
         borderRadius: 6,
         elevation: 3,
         backgroundColor: '#fff',
-        shadowOffset: { width: 1, height: 1},
+        shadowOffset: { width: 1, height: 1 },
         shadowColor: '#333',
         shadowOpacity: 0.3,
-        shadowRadius: 2  
+        shadowRadius: 2
     },
     required: {
         color: 'red',
         marginTop: 0,
         marginBottom: 4,
-        paddingTop:0,
+        paddingTop: 0,
         borderColor: 'black',
     }
 });
 
+//Object containing rating images
 export const images = {
     ratings: {
-        '1' : require('../assets/rating1.png'),
-        '2' : require('../assets/rating2.png'),
-        '3' : require('../assets/rating3.png'),
-        '4' : require('../assets/rating4.png'),
-        '5' : require('../assets/rating5.png')
+        '1': require('../assets/rating1.png'),
+        '2': require('../assets/rating2.png'),
+        '3': require('../assets/rating3.png'),
+        '4': require('../assets/rating4.png'),
+        '5': require('../assets/rating5.png')
     }
 }

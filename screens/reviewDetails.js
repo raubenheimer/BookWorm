@@ -3,9 +3,9 @@ import { StyleSheet, View, Text, Image } from 'react-native';
 import { globalStyles, images } from '../styles/global';
 import Card from '../shared/card';
 
+//Review Details Screen layout
 export default function ReviewDetails({ navigation }) {
     const rating = navigation.getParam('rating')
-
     return (
         <View style={globalStyles.container}>
             <Card>
@@ -20,13 +20,14 @@ export default function ReviewDetails({ navigation }) {
                 </Text>
                 <View style={styles.rating}>
                     <Text style={styles.bookworm}>Book Worm rating: </Text>
-                    <Image source={images.ratings[rating]} style={styles.ratingimg}  />
+                    <Image source={images.ratings[rating]} style={styles.ratingimg} />
                 </View>
             </Card>
         </View>
     )
 }
 
+//Local styles
 const styles = StyleSheet.create({
     rating: {
         flexDirection: 'row',

@@ -5,6 +5,7 @@ import { Formik } from 'formik';
 import { MaterialIcons } from '@expo/vector-icons';
 import * as Yup from 'yup';
 
+//Yup Schema Object used for validation in the Form
 const reviewSchema = Yup.object({
     title: Yup.string()
         .required('Title is a required field')
@@ -22,7 +23,7 @@ const reviewSchema = Yup.object({
         }),
 })
 
-//The new book  review component
+//The New Book Review Screen layout
 export default function ReviewFrom({ addReview }) {
     return (
         <View style={globalStyles.container}>
@@ -43,7 +44,7 @@ export default function ReviewFrom({ addReview }) {
                             onChangeText={props.handleChange('title')}
                             value={props.values.title}
                         />
-                        <Text  style={globalStyles.required}>{props.touched.title && props.errors.title}</Text>
+                        <Text style={globalStyles.required}>{props.touched.title && props.errors.title}</Text>
 
                         <TextInput
                             multiline minHeight={60}
@@ -53,7 +54,7 @@ export default function ReviewFrom({ addReview }) {
                             onChangeText={props.handleChange('body')}
                             value={props.values.body}
                         />
-                        <Text  style={globalStyles.required}>{props.touched.body && props.errors.body}</Text>
+                        <Text style={globalStyles.required}>{props.touched.body && props.errors.body}</Text>
 
                         <TextInput
                             style={globalStyles.input}
@@ -62,7 +63,7 @@ export default function ReviewFrom({ addReview }) {
                             onChangeText={props.handleChange('author')}
                             value={props.values.author}
                         />
-                        <Text  style={globalStyles.required}>{props.touched.author && props.errors.author}</Text>
+                        <Text style={globalStyles.required}>{props.touched.author && props.errors.author}</Text>
 
                         <TextInput
                             style={globalStyles.input}
@@ -72,10 +73,10 @@ export default function ReviewFrom({ addReview }) {
                             value={props.values.rating}
                             keyboardType='numeric'
                         />
-                        <Text  style={globalStyles.required}>{props.touched.rating && props.errors.rating}</Text>
+                        <Text style={globalStyles.required}>{props.touched.rating && props.errors.rating}</Text>
 
                         <MaterialIcons
-                        style={styles.submit}
+                            style={styles.submit}
                             name='add'
                             size={24}
                             onPress={props.handleSubmit}
@@ -87,6 +88,7 @@ export default function ReviewFrom({ addReview }) {
     )
 }
 
+//Local Styles
 const styles = StyleSheet.create({
     form: {
         flex: 1,
@@ -102,7 +104,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#5cb85c',
         overflow: "hidden"
     },
-    
+
 })
 
 

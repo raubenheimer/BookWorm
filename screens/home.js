@@ -5,9 +5,10 @@ import Card from '../shared/card';
 import { MaterialIcons } from '@expo/vector-icons';
 import ReviewForm from './reviewform';
 
-
+//The Home Screen
 export default function Home({ navigation }) {
 
+    //The States used: A state for the Modal(bolean) and a state for the list of books(objects)
     const [modalOpen, setModalOpen] = useState(false);
     const [reviews, setReviews] = useState([
         { title: 'Catch 22', rating: 5, author: 'Joseph Heller', body: 'During the second half of World War II, a soldier named Yossarian is stationed with his Air Force squadron on the island of Pianosa, near the Italian coast in the Mediterranean Sea. Yossarian and his friends endure a nightmarish, absurd existence defined by bureaucracy and violence: they are inhuman resources in the eyes of their blindly ambitious superior officers. The squadron is thrown thoughtlessly into brutal combat situations and bombing runs in which it is more important for the squadron members to capture good aerial photographs of explosions than to destroy their targets. Their colonels continually raise the number of missions that they are required to fly before being sent home, so that no one is ever sent home. Still, no one but Yossarian seems to realize that there is a war going on; everyone thinks he is crazy when he insists that millions of people are trying to kill him.', key: '1' },
@@ -15,6 +16,7 @@ export default function Home({ navigation }) {
         { title: '12 Rules for Life', rating: 3, author: 'Jordan Peterson', body: 'Over the years, (former) Harvard and (current) University of Toronto professor and clinical psychologist Dr. Jordan B. Peterson has developed what he believes to be a definitive set of rules for leading a successful and fulfilling life. Originally conceived of with 40 rules, Peterson has condensed them into a well thought out, manageable list of 12 total rules that he shares in this book.', key: '3' },
     ])
 
+    //Function that adds a new review to the reviews state
     const addReview = (review) => {
         review.key = Math.random().toString();
         setReviews((currentReviews) => {
@@ -23,10 +25,12 @@ export default function Home({ navigation }) {
         setModalOpen(false);
     }
 
+    //Function that navigates to the Review Details Screen
     const pressHandler = () => {
         navigation.navigate('ReviewDetails')
     }
 
+    //The Home Screen layout
     return (
         <View style={globalStyles.container}>
 
@@ -65,6 +69,7 @@ export default function Home({ navigation }) {
     )
 }
 
+//Local Styles
 const styles = StyleSheet.create({
     modalContent: {
         flex: 1

@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
+//Card Layout
 export default function Card(props) {
     return (
         <View style={styles.card}>
@@ -11,6 +12,7 @@ export default function Card(props) {
     )
 }
 
+//Local Styles
 const styles = StyleSheet.create({
     card: {
         borderRadius: 6,
@@ -24,7 +26,6 @@ const styles = StyleSheet.create({
         marginVertical: 6,
         paddingVertical: 7,
     },
-    cardContent: {
-        
+    cardContent: {    
     }
 });

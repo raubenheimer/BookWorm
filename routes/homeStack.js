@@ -5,15 +5,13 @@ import ReviewDetails from '../screens/reviewDetails';
 import Header from '../shared/header';
 import { globalStyles } from '../styles/global';
 
-
-
-
+//Object that specifies the Home Stack Navigator layout
 const screens = {
     Home: {
         screen: Home,
         navigationOptions: ({ navigation }) => {
             return {
-                header: () => <Header navigation={navigation} title='BookWorm'/>
+                header: () => <Header navigation={navigation} title='BookWorm' />
             }
         }
     },
@@ -25,6 +23,7 @@ const screens = {
     }
 }
 
+//Function that creates the Home Stack Navigator
 const HomeStack = createStackNavigator(screens, {
     defaultNavigationOptions: {
         headerTintColor: '#000',

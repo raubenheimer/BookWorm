@@ -2,25 +2,26 @@ import React from 'react';
 import { StyleSheet, Text, View, Image, ImageBackground } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
 
-
-
 export default function Header({ navigation, title }) {
 
+    //Function that opens the Drawer
     const openMenu = () => {
         navigation.openDrawer();
     }
 
-    return(
-        <ImageBackground source={require('../assets/bckgrnd.png')} style={styles.header}> 
+    //Header layout(Home and About Header)
+    return (
+        <ImageBackground source={require('../assets/bckgrnd.png')} style={styles.header}>
             <MaterialIcons name='menu' size={28} onPress={openMenu} style={styles.icon} />
-            <View style={styles.headerTitle}> 
-                <Image source={require('../assets/book_logo.png')} style={styles.headerImage}/>
+            <View style={styles.headerTitle}>
+                <Image source={require('../assets/book_logo.png')} style={styles.headerImage} />
                 <Text style={styles.headerText}>{title}</Text>
             </View>
         </ImageBackground>
     );
 }
 
+//Local Styles
 const styles = StyleSheet.create({
     header: {
         backgroundColor: 'black',
@@ -30,7 +31,6 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center'
     },
-    //Home stack for review
     headerText: {
         fontWeight: 'bold',
         fontSize: 20,
@@ -38,10 +38,10 @@ const styles = StyleSheet.create({
         letterSpacing: 1,
     },
     icon: {
-        position:'absolute',
+        position: 'absolute',
         left: 10,
         bottom: 13
- 
+
     },
     headerImage: {
         width: 28,
